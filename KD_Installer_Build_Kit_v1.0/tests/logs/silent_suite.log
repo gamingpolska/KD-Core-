@@ -1,0 +1,100 @@
+﻿
+17:29:49.239 === START payload=F847DB76748B08108B87167DE62FF4909753F6A1A9DF6DA2E2987FE1C2032DB4 reports=26 ===
+17:29:49.284 BASELINE installed=False key=False settings=True legacy=True
+17:29:49.324 === T1 FIRST INSTALL ===
+17:29:49.331 RUN setup tag=t1_install args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t1_install.log /TASKS="desktopicon"
+17:29:52.784 EXIT setup tag=t1_install code=0
+17:29:52.788 PASS  T1 exit 0  code=0
+17:29:52.791 PASS  T1 exe exists  
+17:29:52.803 PASS  T1 exe hash  
+17:29:52.808 PASS  T1 uninstall key  
+17:29:52.810 PASS  T1 desktop shortcut  
+17:29:52.813 PASS  T1 start menu shortcut  
+17:29:52.819 PASS  T1 settings preserved  
+17:29:52.827 PASS  T1 reports preserved  count=26
+17:29:52.919 === T2 REPAIR (corrupt EXE) ===
+17:29:52.957 T2 hash after corrupt=F847DB76748B08108B87167DE62FF4909753F6A1A9DF6DA2E2987FE1C2032DB4
+17:29:52.959 RUN setup tag=t2_repair args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t2_repair.log /TASKS="desktopicon"
+17:29:54.864 EXIT setup tag=t2_repair code=0
+17:29:54.866 PASS  T2 exit 0  code=0
+17:29:54.876 PASS  T2 hash restored  
+17:29:54.879 PASS  T2 settings preserved  
+17:29:54.882 PASS  T2 desktop shortcut preserved  
+17:29:54.891 PASS  T2 reports preserved  count=26
+17:29:54.904 === T3 CLEAN INSTALL ===
+17:29:54.907 RUN setup tag=t3_clean args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t3_clean.log /CLEAN
+17:29:56.704 EXIT setup tag=t3_clean code=0
+17:29:56.706 PASS  T3 exit 0  code=0
+17:29:56.715 PASS  T3 hash intact  
+17:29:56.729 PASS  T3 settings removed  
+17:29:56.739 PASS  T3 legacy settings removed  
+17:29:56.745 PASS  T3 reports preserved  count=26
+17:29:56.749 RESTORE settings from backup
+17:29:56.791 PASS  T3 settings restored  
+17:29:56.793 PASS  T3 legacy restored  
+17:29:56.794 === T4 UNINSTALL KEEP SETTINGS ===
+17:29:56.811 RUN uninstall tag=t4_uninstall_keep args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\uninstaller_t4_uninstall_keep.log
+17:29:57.758 EXIT uninstall tag=t4_uninstall_keep code=0
+17:29:58.285 WAIT appDir gone=True
+17:29:58.287 PASS  T4 uninstaller exit 0  code=0
+17:29:58.288 PASS  T4 app folder removed  
+17:29:58.323 PASS  T4 uninstall key removed  
+17:29:58.326 PASS  T4 desktop shortcut removed  
+17:29:58.328 PASS  T4 start menu removed  
+17:29:58.330 PASS  T4 settings preserved  
+17:29:58.332 PASS  T4 legacy preserved  
+17:29:58.340 PASS  T4 reports preserved  count=26
+17:29:58.341 === T5 INSTALL AFTER UNINSTALL ===
+17:29:58.343 RUN setup tag=t5_reinstall_after_uninstall args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t5_reinstall_after_uninstall.log /TASKS="desktopicon"
+17:30:03.331 EXIT setup tag=t5_reinstall_after_uninstall code=0
+17:30:03.334 PASS  T5 exit 0  code=0
+17:30:03.345 PASS  T5 exe hash  
+17:30:03.350 PASS  T5 uninstall key  
+17:30:03.352 PASS  T5 desktop shortcut  
+17:30:03.354 PASS  T5 settings preserved  
+17:30:03.363 PASS  T5 reports preserved  count=26
+17:30:03.365 === T6 UNINSTALL REMOVE SETTINGS ===
+17:30:03.369 RUN uninstall tag=t6_uninstall_remove args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\uninstaller_t6_uninstall_remove.log /REMOVESETTINGS
+17:30:04.580 EXIT uninstall tag=t6_uninstall_remove code=0
+17:30:05.104 WAIT appDir gone=True
+17:30:05.106 PASS  T6 uninstaller exit 0  code=0
+17:30:05.108 PASS  T6 app folder removed  
+17:30:05.147 PASS  T6 uninstall key removed  
+17:30:05.150 PASS  T6 desktop shortcut removed  
+17:30:05.153 FAIL  T6 settings removed  
+17:30:05.155 FAIL  T6 legacy removed  
+17:30:05.163 PASS  T6 reports preserved  count=26
+17:30:05.165 RESTORE settings from backup
+17:30:05.201 PASS  T6 settings restored  
+17:30:05.203 === T7 FINAL INSTALL (leave installed) ===
+17:30:05.205 RUN setup tag=t7_final_install args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t7_final_install.log /TASKS="desktopicon"
+17:30:08.267 EXIT setup tag=t7_final_install code=0
+17:30:08.269 PASS  T7 exit 0  code=0
+17:30:08.277 PASS  T7 exe hash  
+17:30:08.282 PASS  T7 uninstall key  
+17:30:08.285 PASS  T7 desktop shortcut  
+17:30:08.300 FAIL  T7 settings preserved  
+17:30:08.302 === T8 LOCKED FILE ERROR + RETRY ===
+17:30:08.663 LOCK pid=16708 ready=True
+17:30:08.666 RUN setup tag=t8_locked args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t8_locked.log /TASKS="desktopicon"
+17:30:10.604 EXIT setup tag=t8_locked code=0
+17:30:10.607 FAIL  T8 failed install returns nonzero  code=0
+17:30:10.618 PASS  T8 exe hash unchanged after failure  
+17:30:11.134 RUN setup tag=t8_retry args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t8_retry.log /TASKS="desktopicon"
+17:30:14.202 EXIT setup tag=t8_retry code=0
+17:30:14.204 PASS  T8 retry succeeds  code=0
+17:30:14.213 PASS  T8 retry hash  
+17:30:14.224 FAIL  T8 retry settings preserved  
+17:30:14.231 PASS  T8 retry reports preserved  count=26
+17:30:14.233 === T9 INTERRUPTED INSTALL ===
+17:30:14.378 T9 caughtDuringCopy=True exitedEarly=False
+17:30:14.408 T9 killed setup processes
+17:30:16.433 PASS  T9 setup processes gone  
+17:30:16.441 PASS  T9 reports preserved after kill  count=26
+17:30:16.444 RUN setup tag=t9_recover args=/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=C:\Users\macie\OneDrive\Documents\Default Project\KD_Installer_Build_Kit_v1.0\tests\logs\installer_t9_recover.log /TASKS="desktopicon"
+17:30:18.139 EXIT setup tag=t9_recover code=0
+17:30:18.143 PASS  T9 recovery install succeeds  code=0
+17:30:18.152 PASS  T9 recovery hash  
+17:30:18.164 FAIL  T9 recovery settings preserved  
+17:30:18.170 PASS  T9 recovery reports preserved  count=26
+17:30:18.174 === SUMMARY pass=53 fail=6 reportsBefore=26 reportsAfter=26 ===
